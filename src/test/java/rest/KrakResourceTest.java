@@ -272,7 +272,7 @@ public class KrakResourceTest {
     @Test
     public void testAdminDeletePerson() {
         System.out.println("adminDeletePerson");
-        // p1 og p2 bor på samme vej a1
+        // p1 og p2 bor på samme vej: a1
         login("admin", "test");
         
         // Arrange
@@ -287,7 +287,7 @@ public class KrakResourceTest {
                         .assertThat().log().body()
                         .statusCode(HttpStatus.OK_200.getStatusCode())
                         .extract()
-                        .as(PersonDTO.class);//extract result JSON as object
+                        .as(PersonDTO.class); //extract result JSON as object
 
         //Assert
         MatcherAssert.assertThat((result), equalTo(expResult));

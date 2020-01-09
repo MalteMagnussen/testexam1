@@ -4,6 +4,11 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import dto.HobbyDTO;
 import dto.PersonDTO;
+import entities.Address;
+import entities.Hobby;
+import entities.Person;
+import entities.Role;
+import entities.User;
 import utils.EMF_Creator;
 import facades.KrakFacadeIMPL;
 import java.util.List;
@@ -130,6 +135,20 @@ public class KrakResource {
     @RolesAllowed({"admin"})
     public PersonDTO adminDeletePerson(@PathParam("id") int id) {
         return FACADE.adminDeletePerson(id);
+    }
+
+    @GET
+    @Path("testdata")
+    @Produces({MediaType.APPLICATION_JSON})
+    public String populateDatabase() {
+
+        boolean success = FACADE.populate();
+
+        if (success) {
+            return "{\"message\":\"Database populated with dummy data\"";
+        } else {
+            return "{\"message\":\"Failed to populate database\"";
+        }
     }
 
 }
