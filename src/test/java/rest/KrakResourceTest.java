@@ -323,125 +323,125 @@ public class KrakResourceTest {
         MatcherAssert.assertThat((result), equalTo(expResult));
 
     }
-
-    /**
-     * Test of getPersonByID method, of class KrakResource.
-     */
-    @Test
-    public void testGetPersonByID() {
-        System.out.println("getPersonByID");
-        int id = 0;
-        KrakResource instance = new KrakResource();
-        PersonDTO expResult = null;
-        PersonDTO result = instance.getPersonByID(id);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getPersonByEmail method, of class KrakResource.
-     */
-    @Test
-    public void testGetPersonByEmail() {
-        System.out.println("getPersonByEmail");
-        String email = "";
-        KrakResource instance = new KrakResource();
-        PersonDTO expResult = null;
-        PersonDTO result = instance.getPersonByEmail(email);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getPersonByPhone method, of class KrakResource.
-     */
-    @Test
-    public void testGetPersonByPhone() {
-        System.out.println("getPersonByPhone");
-        String phone = "";
-        KrakResource instance = new KrakResource();
-        PersonDTO expResult = null;
-        PersonDTO result = instance.getPersonByPhone(phone);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getAllHobbies method, of class KrakResource.
-     */
-    @Test
-    public void testGetAllHobbies() {
-        System.out.println("getAllHobbies");
-        KrakResource instance = new KrakResource();
-        List<HobbyDTO> expResult = null;
-        List<HobbyDTO> result = instance.getAllHobbies();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of adminAddHobby method, of class KrakResource.
-     */
-    @Test
-    public void testAdminAddHobby() {
-        System.out.println("adminAddHobby");
-        HobbyDTO hobby = null;
-        KrakResource instance = new KrakResource();
-        HobbyDTO expResult = null;
-        HobbyDTO result = instance.adminAddHobby(hobby);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of adminEditHobby method, of class KrakResource.
-     */
-    @Test
-    public void testAdminEditHobby() {
-        System.out.println("adminEditHobby");
-        HobbyDTO hobby = null;
-        KrakResource instance = new KrakResource();
-        HobbyDTO expResult = null;
-        HobbyDTO result = instance.adminEditHobby(hobby);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of adminDeleteHobby method, of class KrakResource.
-     */
-    @Test
-    public void testAdminDeleteHobby() {
-        System.out.println("adminDeleteHobby");
-        int id = 0;
-        KrakResource instance = new KrakResource();
-        HobbyDTO expResult = null;
-        HobbyDTO result = instance.adminDeleteHobby(id);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of adminAddPerson method, of class KrakResource.
-     */
-    @Test
-    public void testAdminAddPerson() {
-        System.out.println("adminAddPerson");
-        PersonDTO person = null;
-        KrakResource instance = new KrakResource();
-        PersonDTO expResult = null;
-        PersonDTO result = instance.adminAddPerson(person);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+//
+//    /**
+//     * Test of getPersonByID method, of class KrakResource.
+//     */
+//    @Test
+//    public void testGetPersonByID() {
+//        System.out.println("getPersonByID");
+//        int id = 0;
+//        KrakResource instance = new KrakResource();
+//        PersonDTO expResult = null;
+//        PersonDTO result = instance.getPersonByID(id);
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
+//
+//    /**
+//     * Test of getPersonByEmail method, of class KrakResource.
+//     */
+//    @Test
+//    public void testGetPersonByEmail() {
+//        System.out.println("getPersonByEmail");
+//        String email = "";
+//        KrakResource instance = new KrakResource();
+//        PersonDTO expResult = null;
+//        PersonDTO result = instance.getPersonByEmail(email);
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
+//
+//    /**
+//     * Test of getPersonByPhone method, of class KrakResource.
+//     */
+//    @Test
+//    public void testGetPersonByPhone() {
+//        System.out.println("getPersonByPhone");
+//        String phone = "";
+//        KrakResource instance = new KrakResource();
+//        PersonDTO expResult = null;
+//        PersonDTO result = instance.getPersonByPhone(phone);
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
+//
+//    /**
+//     * Test of getAllHobbies method, of class KrakResource.
+//     */
+//    @Test
+//    public void testGetAllHobbies() {
+//        System.out.println("getAllHobbies");
+//        KrakResource instance = new KrakResource();
+//        List<HobbyDTO> expResult = null;
+//        List<HobbyDTO> result = instance.getAllHobbies();
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
+//
+//    /**
+//     * Test of adminAddHobby method, of class KrakResource.
+//     */
+//    @Test
+//    public void testAdminAddHobby() {
+//        System.out.println("adminAddHobby");
+//        HobbyDTO hobby = null;
+//        KrakResource instance = new KrakResource();
+//        HobbyDTO expResult = null;
+//        HobbyDTO result = instance.adminAddHobby(hobby);
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
+//
+//    /**
+//     * Test of adminEditHobby method, of class KrakResource.
+//     */
+//    @Test
+//    public void testAdminEditHobby() {
+//        System.out.println("adminEditHobby");
+//        HobbyDTO hobby = null;
+//        KrakResource instance = new KrakResource();
+//        HobbyDTO expResult = null;
+//        HobbyDTO result = instance.adminEditHobby(hobby);
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
+//
+//    /**
+//     * Test of adminDeleteHobby method, of class KrakResource.
+//     */
+//    @Test
+//    public void testAdminDeleteHobby() {
+//        System.out.println("adminDeleteHobby");
+//        int id = 0;
+//        KrakResource instance = new KrakResource();
+//        HobbyDTO expResult = null;
+//        HobbyDTO result = instance.adminDeleteHobby(id);
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
+//
+//    /**
+//     * Test of adminAddPerson method, of class KrakResource.
+//     */
+//    @Test
+//    public void testAdminAddPerson() {
+//        System.out.println("adminAddPerson");
+//        PersonDTO person = null;
+//        KrakResource instance = new KrakResource();
+//        PersonDTO expResult = null;
+//        PersonDTO result = instance.adminAddPerson(person);
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
 
 
 }
