@@ -307,11 +307,7 @@ public class KrakFacadeIMPL implements KrakFacadeInterface {
             em.createNamedQuery("User.deleteAllRows").executeUpdate();
             em.createNamedQuery("Role.deleteAllRows").executeUpdate();
             em.getTransaction().commit();
-        } catch (Exception e) {
-            em.getTransaction().rollback();
-        } 
         
-        try {
             em.getTransaction().begin();
 
             Person p1;
