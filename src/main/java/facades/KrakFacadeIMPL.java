@@ -93,10 +93,10 @@ public class KrakFacadeIMPL implements KrakFacadeInterface {
     }
 
     @Override
-    public List<PersonDTO> getPersonsByHobby(HobbyDTO hobby) {
+    public List<PersonDTO> getPersonsByHobby(String hobbyName) {
         EntityManager em = getEntityManager();
         try {
-            List<Person> persons = em.createNamedQuery("Person.getPersonsByHobby").setParameter("name", hobby.getHobbyName()).getResultList();
+            List<Person> persons = em.createNamedQuery("Person.getPersonsByHobby").setParameter("name", hobbyName).getResultList();
             List<PersonDTO> result = new ArrayList();
             for (Person p : persons) {
                 result.add(new PersonDTO(p));
