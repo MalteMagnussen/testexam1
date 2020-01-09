@@ -19,6 +19,7 @@ import javax.persistence.EntityExistsException;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.NoResultException;
+import javax.persistence.RollbackException;
 import javax.ws.rs.WebApplicationException;
 
 /**
@@ -297,19 +298,14 @@ public class KrakFacadeIMPL implements KrakFacadeInterface {
     }
 
     public boolean populate() {
+        
+        deleteRows();
+        
         EntityManager em = getEntityManager();
 
         try {
             em.getTransaction().begin();
-            em.createNamedQuery("Person.deleteAllRows").executeUpdate();
-            em.createNamedQuery("Address.deleteAllRows").executeUpdate();
-            em.createNamedQuery("Hobby.deleteAllRows").executeUpdate();
-            em.createNamedQuery("User.deleteAllRows").executeUpdate();
-            em.createNamedQuery("Role.deleteAllRows").executeUpdate();
-            em.getTransaction().commit();
-        
-            em.getTransaction().begin();
-
+       
             Person p1;
             Person p2;
             Person p3;
@@ -393,6 +389,23 @@ public class KrakFacadeIMPL implements KrakFacadeInterface {
             System.out.println("_____________________________________");
             em.getTransaction().rollback();
             return false;
+        } finally {
+            em.close();
+        }
+    }
+    
+    private void deleteRows() {
+        EntityManager em = getEntityManager();
+        try {
+            em.getTransaction().begin();
+            em.createNamedQuery("Person.deleteAllRows").executeUpdate();
+            em.createNamedQuery("Address.deleteAllRows").executeUpdate();
+            em.createNamedQuery("Hobby.deleteAllRows").executeUpdate();
+            em.createNamedQuery("User.deleteAllRows").executeUpdate();
+            em.createNamedQuery("Role.deleteAllRows").executeUpdate();
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            em.getTransaction().rollback();
         } finally {
             em.close();
         }
