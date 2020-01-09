@@ -299,13 +299,19 @@ public class KrakFacadeIMPL implements KrakFacadeInterface {
 
     public boolean populate() {
 
-        deleteRows();
+//        deleteRows();
 
         EntityManager em = emf.createEntityManager();
 
         try {
             em.getTransaction().begin();
 
+            em.createNamedQuery("Person.deleteAllRows").executeUpdate();
+            em.createNamedQuery("Address.deleteAllRows").executeUpdate();
+            em.createNamedQuery("Hobby.deleteAllRows").executeUpdate();
+            em.createNamedQuery("User.deleteAllRows").executeUpdate();
+            em.createNamedQuery("Role.deleteAllRows").executeUpdate();
+            
             Person p1;
             Person p2;
             Person p3;
