@@ -298,14 +298,14 @@ public class KrakFacadeIMPL implements KrakFacadeInterface {
     }
 
     public boolean populate() {
-        
+
         deleteRows();
-        
-        EntityManager em = getEntityManager();
+
+        EntityManager em = emf.createEntityManager();
 
         try {
             em.getTransaction().begin();
-       
+
             Person p1;
             Person p2;
             Person p3;
@@ -393,9 +393,9 @@ public class KrakFacadeIMPL implements KrakFacadeInterface {
             em.close();
         }
     }
-    
+
     private void deleteRows() {
-        EntityManager em = getEntityManager();
+        EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
             em.createNamedQuery("Person.deleteAllRows").executeUpdate();
