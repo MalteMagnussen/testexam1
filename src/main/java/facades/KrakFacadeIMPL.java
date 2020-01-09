@@ -309,10 +309,8 @@ public class KrakFacadeIMPL implements KrakFacadeInterface {
             em.getTransaction().commit();
         } catch (Exception e) {
             em.getTransaction().rollback();
-        } finally {
-            em.close();
-        }
-
+        } 
+        
         try {
             em.getTransaction().begin();
 

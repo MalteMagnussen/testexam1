@@ -145,9 +145,9 @@ public class KrakResource {
         boolean success = FACADE.populate();
 
         if (success) {
-            return "{\"message\":\"Database populated with dummy data\"";
+            return "{\"message\":\"Database populated with dummy data\"}";
         } else {
-            return "{\"message\":\"Failed to populate database\"";
+            return "{\"message\":\"Failed to populate database\"}";
         }
     }
 
