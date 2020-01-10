@@ -17,7 +17,9 @@ import Swapi from "./components/Swapi.jsx";
 import ShowRoles from "./components/ShowRoles.jsx";
 
 const App = () => {
+  // Single Source of Truth of Logged in State
   const [loggedIn, setLoggedIn] = useState(false);
+
   return (
     <>
       <Router>
